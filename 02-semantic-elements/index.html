@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Elements</title>
+    <style>
+        section, aside{
+            background-color: yellow;
+        }
+
+        canvas {
+            width: 100%;
+            height: 400px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Semantic Elements</h1>
+    <header>This is the header</header>
+    <main>Main content goes here</main>
+    <section>New section</section>
+    <section>New section</section>
+    <section>New section</section>
+    <footer>This is the footer</footer>
+    <aside>Aside is here</aside>
+    <article>Article vs Section</article>
+    <nav>Navigation</nav>
+    <div>I am a DIV, what the heck?</div>
+    <menu>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+    </menu>
+    <hr>
+    <div>I am <strong>strong</strong> and <b>bold</b></div>
+    <h3 id="abc">I am <em>emphasized</em> and <i>italic</i></h3>
+    <hr>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        const elm = document.getElementById('abc');
+        elm.style.backgroundColor = 'green';
+
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "red";
+        ctx.fillRect(0, 0, 100, 100);        
+    </script>
+</body>
+</html>
