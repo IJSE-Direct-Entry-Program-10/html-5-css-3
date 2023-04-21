@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 - Flex Layout</title>
+    <style>
+        #outer {
+            background-color: yellow;
+            width: 450px;
+            height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            /* align-items: center; */
+            align-content: center;
+            align-items: center;
+        }
+
+        .inner {
+            width: 200px;
+            height: 100px;
+            flex: 0 0 100px;
+            font-size: 2rem;
+            font-weight: bold;
+            border: 1px solid black;
+        }
+
+        .inner:first-child {
+            background-color: red;
+        }
+
+        .inner:nth-child(2){
+            background-color: green;
+            height: 120px;
+        }
+
+        .inner:last-child {
+            background-color: blue;
+            height: 140px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 3 Flex Layout</h1>
+    <div id="outer">
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner">3</div>
+        <div class="inner">4</div>
+        <div class="inner">5</div>
+        <div class="inner">6</div>
+    </div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A cum iste quaerat nemo atque eaque provident quo molestiae modi tempore, nesciunt dicta quidem quod necessitatibus, dolorem molestias. Quos, ut magni.</p>
+</body>
+</html>
