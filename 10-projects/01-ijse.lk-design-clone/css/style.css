@@ -24,6 +24,7 @@ header {
     position: sticky;
     top: 0;
     background-color: rgba(255, 255, 255, 0.822);
+    z-index: 2;
 }
 
 header > .container {
@@ -95,6 +96,7 @@ ion-icon[name="logo-instagram"]{
     position: fixed;
     top: 51px;
     bottom: 0;
+    z-index: 2;
 }
 
 #main-nav > menu menu {
@@ -188,6 +190,7 @@ ion-icon[name="logo-instagram"]{
 
 main {
     margin-left: 200px;
+    border-right: 1px solid lightgray;
 }
 
 #slider {
@@ -250,6 +253,7 @@ main {
 @media all and (max-width: 1023px) {
     main {
         margin-left: unset;
+        border:unset;
     }
 }
 
@@ -272,4 +276,19 @@ main {
 #main-content > div:last-child img {
     border-radius: 15px;
     box-shadow: 0 0 8px 1px #ff1b1b;
+}
+
+@media all and (max-width: 1023px) {
+    #main-content > div:last-child {
+        display: none;
+    }
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-top: 1px solid lightgray;
 }
