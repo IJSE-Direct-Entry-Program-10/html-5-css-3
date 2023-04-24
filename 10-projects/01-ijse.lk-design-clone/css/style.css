@@ -6,6 +6,10 @@ html {
     font-family: Ubuntu, sans-serif;
 }
 
+nav {
+    list-style-type: none;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -29,7 +33,6 @@ header img {
 
 #sm-container {
     display: flex;
-    list-style-type: none;
     /* gap: column-gap row-gap; */
     column-gap: 5px;
 }
@@ -76,22 +79,19 @@ ion-icon[name="logo-instagram"]{
 
 /* Navigation */
 
-nav {
-    list-style-type: none;
-}
-
 body > section > .container {
     display: flex;
 }
 
 #main-nav {
     flex-basis: 200px;
+    flex-shrink: 0;
     border-right: 1px solid lightgray;
     border-left: 1px solid lightgray;
 }
 
-#main-nav, #main-nav nav {
-    min-width: 200px;
+#main-nav nav {
+    min-width: 250px;
 }
 
 #main-nav li{
@@ -108,24 +108,6 @@ body > section > .container {
     position: relative;
 }
 
-#main-nav li.drop-down::after {
-    content: "";
-    display: block;
-    position: absolute;
-    right: 10px;
-    height: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    border-top: 8px solid transparent;
-    border-left: 8px solid red;
-    border-bottom: 8px solid transparent;
-}
-
-#main-nav li.drop-down:hover::after{
-    border-left-color: black;
-}
-
 #main-nav li.drop-down:hover nav {
     display: block;
 }
@@ -133,15 +115,25 @@ body > section > .container {
 #main-nav li.drop-down > nav {
     display: none;
     position: absolute;
-    width: 250px;
-    left: 100%;
-    top: 0;
     background-color: white;
     border: 1px solid lightgray;
-    box-shadow: 6px 1px 10px 0px #0000006b;
+    left: 100%;
+    top: 0;
+    box-shadow: 6px 5px 10px 0px #0000006b;
 }
 
-main p{
-    margin: 0;
-    padding: 10px;
+#main-nav li.drop-down::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 8px solid transparent;
+    border-left: 8px solid red;
+    border-bottom: 8px solid transparent;
+}
+
+#main-nav li.drop-down:hover::after{
+    border-left-color: black;
 }
