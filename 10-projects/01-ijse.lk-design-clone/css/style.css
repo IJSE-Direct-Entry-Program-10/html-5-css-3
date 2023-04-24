@@ -190,6 +190,63 @@ main {
     margin-left: 200px;
 }
 
+#slider {
+    background-color: yellow;
+    height: 450px;
+    overflow-x: hidden;
+}
+
+#slides-wrapper {
+    position: relative;
+    width: 400%;            /*  Relative to slider's width */
+    height: 100%;
+    animation-name: slide-anim;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide-anim {
+    from, to {
+        left: 0;
+    }
+
+    25%{
+        left: -100%;
+    }
+
+    50%{
+        left: -200%;
+    }
+
+    75%{
+        left: -300%;
+    }
+}
+
+#slider .slide {
+    float: left;
+    width: calc(100% / 4);  /* Relative to slides-wrapper's width */
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+#slide-1 {
+    background-image: url(../img/1.jpg);
+}
+
+#slide-2 {
+    background-image: url(../img/2.jpg);
+}
+
+#slide-3 {
+    background-image: url(../img/3.jpg);
+}
+
+#slide-4 {
+    background-image: url(../img/4.jpg);
+}
+
 @media all and (max-width: 1023px) {
     main {
         margin-left: unset;
