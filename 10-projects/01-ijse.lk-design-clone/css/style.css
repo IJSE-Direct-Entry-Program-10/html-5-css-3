@@ -75,3 +75,73 @@ ion-icon[name="logo-instagram"]{
 }
 
 /* Navigation */
+
+nav {
+    list-style-type: none;
+}
+
+body > section > .container {
+    display: flex;
+}
+
+#main-nav {
+    flex-basis: 200px;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+
+#main-nav, #main-nav nav {
+    min-width: 200px;
+}
+
+#main-nav li{
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+#main-nav li:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+#main-nav li.drop-down {
+    position: relative;
+}
+
+#main-nav li.drop-down::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 10px;
+    height: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-top: 8px solid transparent;
+    border-left: 8px solid red;
+    border-bottom: 8px solid transparent;
+}
+
+#main-nav li.drop-down:hover::after{
+    border-left-color: black;
+}
+
+#main-nav li.drop-down:hover nav {
+    display: block;
+}
+
+#main-nav li.drop-down > nav {
+    display: none;
+    position: absolute;
+    width: 250px;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    border: 1px solid lightgray;
+    box-shadow: 6px 1px 10px 0px #0000006b;
+}
+
+main p{
+    margin: 0;
+    padding: 10px;
+}
