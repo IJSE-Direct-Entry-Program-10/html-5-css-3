@@ -6,13 +6,15 @@ html {
     font-family: Ubuntu, sans-serif;
 }
 
-header {
-    border-bottom: 1px solid lightgray;
-}
-
 .container {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header {
+    border-bottom: 1px solid lightgray;
 }
 
 header > .container {
@@ -34,10 +36,10 @@ header img {
 
 #sm-container li {
     padding: 10px;
-    border-radius: 50%;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
+    border-radius: 50%;
 }
 
 #sm-container li:hover {
@@ -64,3 +66,12 @@ ion-icon[name="logo-linkedin"]{
 ion-icon[name="logo-instagram"]{
     color: rgb(149, 0, 248);
 }
+
+@media all and (max-width: 1023px) {
+    header > .container {
+        flex-direction: column;
+        padding-bottom: 5px;
+    }
+}
+
+/* Navigation */
