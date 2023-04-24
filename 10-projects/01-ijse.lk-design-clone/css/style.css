@@ -19,6 +19,9 @@ nav {
 
 header {
     border-bottom: 1px solid lightgray;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.822);
 }
 
 header > .container {
@@ -79,15 +82,13 @@ ion-icon[name="logo-instagram"]{
 
 /* Navigation */
 
-body > section > .container {
-    display: flex;
-}
-
 #main-nav {
-    flex-basis: 200px;
-    flex-shrink: 0;
+    width: 200px;
     border-right: 1px solid lightgray;
     border-left: 1px solid lightgray;
+    position: fixed;
+    top: 51px;
+    bottom: 0;
 }
 
 #main-nav nav {
@@ -136,4 +137,10 @@ body > section > .container {
 
 #main-nav li.drop-down:hover::after{
     border-left-color: black;
+}
+
+/* Main */
+
+main {
+    margin-left: 200px;
 }
