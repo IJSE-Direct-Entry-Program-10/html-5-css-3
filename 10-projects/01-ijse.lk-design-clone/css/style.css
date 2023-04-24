@@ -6,8 +6,10 @@ html {
     font-family: Ubuntu, sans-serif;
 }
 
-nav {
+menu {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
@@ -95,7 +97,7 @@ ion-icon[name="logo-instagram"]{
     bottom: 0;
 }
 
-#main-nav nav {
+#main-nav > menu menu {
     min-width: 250px;
 }
 
@@ -113,11 +115,11 @@ ion-icon[name="logo-instagram"]{
     position: relative;
 }
 
-#main-nav li.drop-down:hover nav {
+#main-nav li.drop-down:hover menu {
     display: block;
 }
 
-#main-nav li.drop-down > nav {
+#main-nav li.drop-down > menu {
     display: none;
     position: absolute;
     background-color: white;
@@ -159,13 +161,27 @@ ion-icon[name="logo-instagram"]{
         padding: 10px 0;
     }
 
-    #main-nav li.drop-down > nav {
+    #main-nav li.drop-down > menu {
         position: relative;
         left: 0;
         top: 10px;
         box-shadow: unset;
         border: unset;
     }
+
+    #main-nav li.drop-down::after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        left: 10px;
+        border-top: 8px solid red;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+    }
+
+    #main-nav li.drop-down:hover::after{
+        display: none;
+    }    
 }
 
 /* Main */
