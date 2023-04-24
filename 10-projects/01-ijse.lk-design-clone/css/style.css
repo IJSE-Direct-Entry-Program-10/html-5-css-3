@@ -210,15 +210,15 @@ main {
         left: 0;
     }
 
-    25%{
+    20%, 25%{
         left: -100%;
     }
 
-    50%{
+    45%, 50%{
         left: -200%;
     }
 
-    75%{
+    70%, 75%{
         left: -300%;
     }
 }
@@ -251,4 +251,25 @@ main {
     main {
         margin-left: unset;
     }
+}
+
+@media all and (max-width: 575px) {
+    #slider {
+        display: none;
+    }
+}
+
+#main-content {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+#main-content > div:first-child {
+    padding: 5px 50px;
+}
+
+#main-content > div:last-child img {
+    border-radius: 15px;
+    box-shadow: 0 0 8px 1px #ff1b1b;
 }
