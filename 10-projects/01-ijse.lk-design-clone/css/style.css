@@ -74,6 +74,10 @@ ion-icon[name="logo-instagram"]{
 }
 
 @media all and (max-width: 1023px) {
+    header {
+        position: relative;
+    }
+
     header > .container {
         flex-direction: column;
         padding-bottom: 5px;
@@ -123,24 +127,55 @@ ion-icon[name="logo-instagram"]{
     box-shadow: 6px 5px 10px 0px #0000006b;
 }
 
-#main-nav li.drop-down::after {
-    content: "";
-    display: block;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    border-top: 8px solid transparent;
-    border-left: 8px solid red;
-    border-bottom: 8px solid transparent;
+@media all and (min-width: 1024px) {
+
+    #main-nav li.drop-down::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-top: 8px solid transparent;
+        border-left: 8px solid red;
+        border-bottom: 8px solid transparent;
+    }
+
+    #main-nav li.drop-down:hover::after{
+        border-left-color: black;
+    }
+
 }
 
-#main-nav li.drop-down:hover::after{
-    border-left-color: black;
+@media all and (max-width: 1023px) {
+    #main-nav {
+        position: static;
+        border: unset;
+        text-align: center;
+        width: 100%;
+    }
+
+    #main-nav li.drop-down {
+        padding: 10px 0;
+    }
+
+    #main-nav li.drop-down > nav {
+        position: relative;
+        left: 0;
+        top: 10px;
+        box-shadow: unset;
+        border: unset;
+    }
 }
 
 /* Main */
 
 main {
     margin-left: 200px;
+}
+
+@media all and (max-width: 1023px) {
+    main {
+        margin-left: unset;
+    }
 }
