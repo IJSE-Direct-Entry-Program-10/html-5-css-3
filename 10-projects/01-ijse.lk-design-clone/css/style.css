@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Ubuntu, sans-serif;
+}
+
+header {
+    border-bottom: 1px solid lightgray;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 50px;
+}
+
+#sm-container {
+    display: flex;
+    list-style-type: none;
+    /* gap: column-gap row-gap; */
+    column-gap: 5px;
+}
+
+#sm-container li {
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+#sm-container li:hover {
+    background-color: rgb(224, 224, 224);
+    cursor: pointer;
+}
+
+ion-icon[name="logo-facebook"]{
+    color: rgb(0, 81, 173);
+}
+
+ion-icon[name="logo-twitter"]{
+    color: rgb(0, 153, 255);
+}
+
+ion-icon[name="logo-youtube"]{
+    color: rgb(255, 0, 0);
+}
+
+ion-icon[name="logo-linkedin"]{
+    color: rgb(4, 0, 255);
+}
+
+ion-icon[name="logo-instagram"]{
+    color: rgb(149, 0, 248);
+}
